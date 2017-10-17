@@ -45,6 +45,5 @@ namespace AddressBook.Models
     {
       _phone = newPhone;
     }
-
   }
 }

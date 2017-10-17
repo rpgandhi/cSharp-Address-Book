@@ -1,15 +1,14 @@
 @{
   Layout = "_Layout";
 }
-@Html.Partial("Index")
 
 <div class="container">
   <h1>Here are your contacts:</h1>
-  <ul>
+  @* <ul>
     <li>@Model.GetName()</li>
     <li>@Model.GetAddress()</li>
     <li>@Model.GetPhone()</li>
-  </ul>
+  </ul> *@
 
   <button type='submit' class='btn'><a href="/DeleteConfirm">Clear Address Book</a></button>
 
