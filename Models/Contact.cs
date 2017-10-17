@@ -9,9 +9,11 @@ namespace AddressBook.Models
     private string _address;
     private string _phone;
 
-    public Contact (string name)
+    public Contact (string name, string address, string phone)
     {
       _name = name;
+      _address = address;
+      _phone = phone;
     }
 
     public string GetName()
@@ -24,11 +26,6 @@ namespace AddressBook.Models
       _name = newName;
     }
 
-    public Contact (string address)
-    {
-      _address = address;
-    }
-
     public string GetAddress()
     {
       return _address;
@@ -37,11 +34,6 @@ namespace AddressBook.Models
     public void SetAddress(string newAddress)
     {
       _address = newAddress;
-    }
-
-    public Contact (string phone)
-    {
-      _phone = phone;
     }
 
     public string GetPhone()
