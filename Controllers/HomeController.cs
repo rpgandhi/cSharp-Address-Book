@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using AddressBook.Models;
+using System.Collections.Generic;
 
 namespace AddressBook.Controllers
 {
@@ -9,10 +10,11 @@ namespace AddressBook.Controllers
         [HttpGet("/")]
         public ActionResult Index()
         {
-          return View();
+          List<Contact> allContacts = Contact.GetAll();
+          return View(allContacts);
         }
 
-        [HttpPost("/NewContact")]
+        [HttpGet("/NewContact")]
         public ActionResult NewContact()
         {
           return View();
@@ -22,7 +24,8 @@ namespace AddressBook.Controllers
         [HttpPost("/AddConfirm")]
         public ActionResult AddConfirm()
         {
-          Contact myContact = new Contact(Request.Query["name"], Request.Query["address"], Request.Query["phone"]);
+          Contact myContact = new Contact(Request.Form["name"], Request.Form["address"], Request.Form["phone"]);
+          myContact.Save();
           return View(myContact);
         }
 
@@ -30,6 +33,7 @@ namespace AddressBook.Controllers
         [HttpPost("/DeleteConfirm")]
         public ActionResult DeleteConfirm()
         {
+          Contact.ClearAll();
           return View();
         }
     }

@@ -9,6 +9,8 @@ namespace AddressBook.Models
     private string _address;
     private string _phone;
 
+    private static List<Contact> _instances = new List<Contact> {};
+
     public Contact (string name, string address, string phone)
     {
       _name = name;
@@ -44,6 +46,21 @@ namespace AddressBook.Models
     public void SetPhone(string newPhone)
     {
       _phone = newPhone;
+    }
+
+    public static List<Contact> GetAll()
+    {
+      return _instances;
+    }
+
+    public void Save()
+    {
+      _instances.Add(this);
+    }
+
+    public static void ClearAll()
+    {
+      _instances.Clear();
     }
   }
 }
