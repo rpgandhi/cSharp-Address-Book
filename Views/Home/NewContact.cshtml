@@ -1,35 +1,29 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title>New Contact</title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-  </head>
+@{
+  Layout = "_Layout";
+}
 
-  <body>
-    <h1>Fill out the form to add a new contact to your address book</h1>
-    <form action='/'>
+<div class="container">
+  <h1>Fill out the form to add a new contact to your address book</h1>
+  <form action='/'>
 
-      <div class='form-group'>
-        <label for='name'>Name</label>
-        <input id='name' name='name' class='form-control' type='text'>
-      </div>
+    <div class='form-group'>
+      <label for='name'>Name</label>
+      <input id='name' name='name' class='form-control' type='text'>
+    </div>
 
-      <div class='form-group'>
-        <label for='address'>Address</label>
-        <input id='address' name='address' class='form-control' type='text'>
-      </div>
+    <div class='form-group'>
+      <label for='address'>Address</label>
+      <input id='address' name='address' class='form-control' type='text'>
+    </div>
 
-      <div class='form-group'>
-        <label for='phone'>Phone Number</label>
-        <input id='phone' name='phone' class='form-control' type='text'>
-      </div>
+    <div class='form-group'>
+      <label for='phone'>Phone Number</label>
+      <input id='phone' name='phone' class='form-control' type='text'>
+    </div>
 
-      <button type='submit' class='btn'><a href="/addConfirm">Add Contact!</a></button>
+    <button type='submit' class='btn'><a href="/addConfirm">Add Contact!</a></button>
 
-    </form>
+  </form>
 
-    <button type='submit' class='btn'><a href="/">View Address Book</a></button>
-
-  </body>
-</html>
+  <button type='submit' class='btn'><a href="/">View Address Book</a></button>
+</div>

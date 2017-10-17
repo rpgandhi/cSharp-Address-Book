@@ -1,22 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title>Welcome to your Address Book!</title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-  </head>
+@{
+  Layout = "_Layout";
+}
+@Html.Partial("Index ")
 
-  <body>
-    <h1>Here are your contacts:</h1>
-    <ul>
-      <li>@Model.GetName()</li>
-      <li>@Model.GetAddress()</li>
-      <li>@Model.GetPhone()</li>
-    </ul>
+<div class="container">
+  <h1>Here are your contacts:</h1>
+  <ul>
+    <li>@Model.GetName()</li>
+    <li>@Model.GetAddress()</li>
+    <li>@Model.GetPhone()</li>
+  </ul>
 
-    <button type='submit' class='btn'><a href="/DeleteConfirm">Clear Address Book</a></button>
+  <button type='submit' class='btn'><a href="/DeleteConfirm">Clear Address Book</a></button>
 
-    <button type='submit' class='btn'><a href="/NewContact">Click here to add a new contact!</a></button>
-
-  </body>
-</html>
+  <button type='submit' class='btn'><a href="/NewContact">Click here to add a new contact!</a></button>
+</div>

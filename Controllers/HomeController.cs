@@ -9,11 +9,7 @@ namespace AddressBook.Controllers
         [Route("/")]
         public ActionResult Index()
         {
-          Contact myContact = new Contact();
-          myContact.SetName(Request.Query["name"]);
-          myContact.SetAddress(Request.Query["address"]);
-          myContact.SetPhone(Request.Query["phone"]);
-          return View(myContact);
+          return View();
         }
 
         [Produces("text/html")]
@@ -27,7 +23,11 @@ namespace AddressBook.Controllers
         [Route("/AddConfirm")]
         public ActionResult AddConfirm()
         {
-          return View();
+          Contact myContact = new Contact();
+          myContact.SetName(Request.Query["name"]);
+          myContact.SetAddress(Request.Query["address"]);
+          myContact.SetPhone(Request.Query["phone"]);
+          return View(myContact);
         }
 
         [Produces("text/html")]
