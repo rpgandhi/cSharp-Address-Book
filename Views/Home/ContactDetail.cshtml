@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+
+<div class="container">
+  <h1>Contact Details:</h1>
+  <p>@Model.GetName()</p>
+  <p>@Model.GetAddress()</p>
+  <p>@Model.GetPhone()</p>
+
+  <button type='submit' class='btn'><a href="/">View Address Book</a></button>
+
+  <button type='submit' class='btn'><a href="/NewContact">Add another contact</a></button>
+</div>

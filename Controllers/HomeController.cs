@@ -20,7 +20,6 @@ namespace AddressBook.Controllers
           return View();
         }
 
-
         [HttpPost("/AddConfirm")]
         public ActionResult AddConfirm()
         {
@@ -29,12 +28,18 @@ namespace AddressBook.Controllers
           return View(myContact);
         }
 
-
         [HttpPost("/DeleteConfirm")]
         public ActionResult DeleteConfirm()
         {
           Contact.ClearAll();
           return View();
+        }
+
+        [HttpGet("/contact/{id}")]
+        public ActionResult ContactDetail(int id)
+        {
+          Contact detail = Contact.Find(id);
+          return View(detail);
         }
     }
 }
