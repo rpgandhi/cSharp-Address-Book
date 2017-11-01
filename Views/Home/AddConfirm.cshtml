@@ -4,13 +4,14 @@
 <div class="container">
   <h1>This contact has new been added to your address book!</h1>
 
-  <ul>
-    <li>@Model.GetName()</li>
-    <li>@Model.GetAddress()</li>
-    <li>@Model.GetPhone()</li>
+  <ul style="list-style:none;">
+    <li><strong>Name: </strong>@Model.GetName()</li>
+    <li><strong>Address: </strong>@Model.GetAddress()</li>
+    <li><strong>Phone Number: </strong>@Model.GetPhone()</li>
   </ul>
 
   <button type='submit' class='btn'><a href="/">View Address Book</a></button>
-
+<br>
+<br>
   <button type='submit' class='btn'><a href="/NewContact">Add another contact</a></button>
 </div>

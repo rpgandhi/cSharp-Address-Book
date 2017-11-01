@@ -3,12 +3,16 @@
 }
 
 <div class="container">
-  <h1>Contact Details:</h1>
-  <p>@Model.GetName()</p>
-  <p>@Model.GetAddress()</p>
-  <p>@Model.GetPhone()</p>
-
+  <h1>Contact Details for @Model.GetName():</h1>
+  <ul style="list-style:none;"
+    <li><strong>Address: </strong>@Model.GetAddress()</li>
+    <li><strong>Phone Number: </strong>@Model.GetPhone()</li>
+  <ul>
+<br>
+</div>
+<div class="container">
   <button type='submit' class='btn'><a href="/">View Address Book</a></button>
-
+  <br>
+  <br>
   <button type='submit' class='btn'><a href="/NewContact">Add another contact</a></button>
 </div>
